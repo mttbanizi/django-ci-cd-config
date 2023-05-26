@@ -9,7 +9,7 @@ services:
   db:
     image: postgres:14.1
     environment:
-      - POSTGRES_DB=devopshobbies
+      - POSTGRES_DB=devops
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=password
 
@@ -38,6 +38,13 @@ services:
       - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
       - SECRET_KEY=i5j5(f87^%ux__9f*&w$m@&u=sp^bhxj+26u-7na06z6egieuj
       - ALLOWED_HOSTS=["digiadam.website"]
+      - SECRET_KEY=devsecretkey
+      - DEBUG=1
+      - DB_HOST=db
+      - DB_NAME=devops
+      - DB_USER=user
+      - DB_PASS=password
+
     volumes:
       - static_volume:/app/backend/staticfiles
       - media_volume:/app/backend/media
