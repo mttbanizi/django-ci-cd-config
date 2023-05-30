@@ -37,7 +37,7 @@ services:
       - DATABASE_URL=psql://user:password@db:5432
       - CELERY_BROKER_URL=amqp://guest:guest@rabbitmq:5672//
       - SECRET_KEY=i5j5(f87^%ux__9f*&w$m@&u=sp^bhxj+26u-7na06z6egieuj
-      - ALLOWED_HOSTS=["api.digiadam.website"]
+      - ALLOWED_HOSTS=api.digiadam.website
       - SECRET_KEY=devsecretkey
       - DEBUG=1
       - DB_HOST=db
